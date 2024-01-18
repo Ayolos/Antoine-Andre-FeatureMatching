@@ -1,10 +1,10 @@
-# Antoine.Andre.Ocr Repository
+# Antoine.Andre.FeatureMatching Repository
 
 This repository contains the code for Antoine Andre's Optical Character Recognition (OCR) project.
 
 ## Repository Link
 
-[Antoine.Andre.Ocr](https://github.com/Ayolos/Antoine.Andre.Ocr.git)
+[Antoine.Andre.FeatureMatching](https://github.com/Ayolos/Antoine-Andre-FeatureMatching.git)
 
 ## Description
 
