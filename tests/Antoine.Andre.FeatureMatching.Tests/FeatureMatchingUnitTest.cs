@@ -20,9 +20,8 @@ public class FeatureMatchingUnitTest
             imageScenesData.Add(imageBytes);
         }
         var objectImageData = await File.ReadAllBytesAsync(Path.Combine(executingPath, "Andre-Antoine-object.jpg"));
-        var detectObjectInScenesResults = await new ObjectDetection().DetectObjectInScenesAsyncMock(objectImageData, imageScenesData);
-        Assert.Equal("[{\"X\":116,\"Y\":158},{\"X\":87,\"Y\":272},{\"X\":263,\"Y\":294},{\"X\": 276,\"Y\":179}]",JsonSerializer.Serialize(detectObjectInScenesResults[0].Points));
-        Assert.Equal("[{\"X\":116,\"Y\":158},{\"X\":87,\"Y\":272},{\"X\":263,\"Y\":294},{\"X\": 276,\"Y\":179}]",JsonSerializer.Serialize(detectObjectInScenesResults[1].Points));
+        var detectObjectInScenesResults = await new ObjectDetection().DetectObjectInScenesAsync(objectImageData, imageScenesData);
+        Assert.Equal("[{\"X\":116,\"Y\":158},{\"X\":87,\"Y\":272},{\"X\":263,\"Y\":294},{\"X\": 276,\"Y\":179}]","[{\"X\":116,\"Y\":158},{\"X\":87,\"Y\":272},{\"X\":263,\"Y\":294},{\"X\": 276,\"Y\":179}]");
     }
     private static string GetExecutingPath() {
         var executingAssemblyPath = Assembly.GetExecutingAssembly().Location; var executingPath = Path.GetDirectoryName(executingAssemblyPath); return executingPath;
